@@ -1,0 +1,49 @@
+{
+  "name": "web-webpack-template",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve --mode debug",
+    "build": "vue-cli-service build  --mode prod",
+    "build:dev": "vue-cli-service build --mode dev",
+    "build:test": "vue-cli-service build --mode test",
+    "remove": "rimraf node_modules package-lock.json",
+    "update": "ncu -u --target minor && npm run remove && npm i -f",
+    "format": "prettier --config ./.prettierrc --write ./*.* ./src/**/*.js ./src/**/*.ts ./src/**/*.css ./src/**/*.vue"
+  },
+  "dependencies": {
+    "@fe/calc": "^1.0.4",
+    "@fe/directive": "^1.0.7",
+    "@fe/extend": "^1.0.3",
+    "@fe/filter": "^1.0.8",
+    "@fe/form-valid": "^1.0.7",
+    "@fe/utils": "^1.0.4",
+    "@fe/validator": "^1.0.7",
+    "@fe/vue-component-library": "^1.3.7",
+    "axios": "^0.27.2",
+    "core-js": "^3.22.6",
+    "dayjs": "^1.11.2",
+    "element-plus": "^1.3.0-beta.10",
+    "jsencrypt": "^3.2.1",
+    "viewerjs": "^1.10.5",
+    "vue": "^3.2.36",
+    "vue-router": "^4.0.15",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.17",
+    "@vue/cli-plugin-router": "~4.5.17",
+    "@vue/cli-plugin-typescript": "~4.5.17",
+    "@vue/cli-plugin-vuex": "~4.5.17",
+    "@vue/cli-service": "~4.5.17",
+    "@vue/compiler-sfc": "^3.2.36",
+    "compression-webpack-plugin": "^6.1.1",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.2.3",
+    "postcss-preset-env": "^7.6.0",
+    "postcss-url": "^9.0.0",
+    "typescript": "^4.6.4"
+  },
+  "description": "webpack项目模板",
+  "author": "developer"
+}
